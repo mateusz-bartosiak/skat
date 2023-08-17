@@ -1,20 +1,19 @@
-﻿namespace Skat
+﻿namespace Skat;
+
+internal class Match
 {
-    internal class Match
+    private Table table;
+
+    public int RoundNumber { get; private set; } = 1;
+
+    public Match(Player[] players) 
     {
-        private Table table;
+        table = new Table(players);
+    }
 
-        public int RoundNumber { get; private set; } = 1;
-
-        public Match(Player[] players) 
-        {
-            table = new Table(players);
-        }
-
-        public void AdvanceToNextRound()
-        {
-            table.AdvanceToNextRound();
-            RoundNumber++;
-        }
+    public void AdvanceToNextRound()
+    {
+        table.AdvanceToNextRound();
+        RoundNumber++;
     }
 }
