@@ -1,12 +1,5 @@
 ﻿using Skat;
 
-var cards = Card.MakeADeck();
-
-foreach (var card in cards)
-    Console.WriteLine(card);
-
-Console.WriteLine("The count of cards in a deck: " + cards.Count);
-
 var players = new Player[]
 {
     new Player("Player 1"),
@@ -14,22 +7,22 @@ var players = new Player[]
     new Player("Player 3")
 };
 
-var rand = new Random();
+//var rand = new Random();
 
-for (int i = 0; true; i++)
-{
-    i %= 3;
-    var card = cards[rand.Next(cards.Count)];
-    players[i].HeldCards.Add(card);
-    cards.Remove(card);
-    if (cards.Count == 2)
-        break;
-}
-var skat = cards; // 2 cards remain
+//for (int i = 0; true; i++)
+//{
+//    i %= 3;
+//    var card = cards[rand.Next(cards.Count)];
+//    players[i].HeldCards.Add(card);
+//    cards.Remove(card);
+//    if (cards.Count() == 2)
+//        break;
+//}
+//var skat = cards; // 2 cards remain
 
-foreach (var player in players)
-{
-    Console.WriteLine(player.ToString());
-}
+//foreach (var player in players)
+//{
+//    Console.WriteLine(player.ToString());
+//}
 
-Console.WriteLine("The skat contains:\n" + String.Join('\n', skat.Select(c => c.ToString())));
+//Console.WriteLine("The skat contains:\n" + String.Join('\n', skat.Select(c => c.ToString())));

@@ -2,40 +2,38 @@
 
 internal class Table
 {
+    public Player[] Players { get; }
     public Player TenOClockPlayer => Players[0];
     public Player TwoOClockPlayer => Players[1];
     public Player SixOClockPlayer => Players[2];
 
-    public Player[] Players { get; }
-    public Player Forehand;
-    public Player Middlehand;
-    public Player Backhand;
+    public Player Forehand => Players[KeepInBounds(tableRolesOffset)];
+    public Player Middlehand => Players[KeepInBounds(tableRolesOffset+1)];
+    public Player Backhand => Players[KeepInBounds(tableRolesOffset+2)];
+
     public Player Dealer => Backhand;
 
-    public Player NextPlayerOf(Player player) => Players[(Array.IndexOf(Players, player) + 1) % 3];
+    public Player NextPlayerOf(Player player) => Players[KeepInBounds(Array.IndexOf(Players, player) + 1)];
 
     public Player PreviousPlayerOf(Player player)
     {
-        int index = Array.IndexOf(Players, player) - 1;
-        return Players[(index < 0) ? 2 : (index - 1)];
+        int index = KeepInBounds(Array.IndexOf(Players, player) - 1);
+        return Players[index];
     }
+
+    private int tableRolesOffset = 0;
+
+    private int KeepInBounds(int n) => n < 0 ? 2 : n % 3;
 
     public Table(Player[] players)
     {
+        if (players.Length < 3)
+            throw new ArgumentOutOfRangeException();
         Players = players;
-        Forehand = TenOClockPlayer;
-        Middlehand = TwoOClockPlayer;
-        Backhand = SixOClockPlayer;
     }
 
     public void AdvanceToNextRound()
     {
-        var previousBackhand = Backhand;
-        var previousMiddlehand = Middlehand;
-        var previousForehand = Forehand;
-
-        Forehand = previousMiddlehand;
-        Middlehand = previousBackhand;
-        Backhand = previousForehand;
+        tableRolesOffset = KeepInBounds(tableRolesOffset + 1);
     }
 }

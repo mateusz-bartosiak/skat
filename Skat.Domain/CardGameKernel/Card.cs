@@ -6,17 +6,10 @@ internal class Card
 
     public Rank Rank { get; }
 
-    Card(Suit suit, Rank rank)
+    public Card(Suit suit, Rank rank)
     {
         Suit = suit;
         Rank = rank;
-    }
-
-    public static List<Card> MakeADeck()
-    {
-        return Enum.GetValues<Suit>()
-            .SelectMany(s => Enum.GetValues<Rank>(), (s, r) => new Card(s, r))
-            .ToList();
     }
 
     public override string ToString()
@@ -24,9 +17,14 @@ internal class Card
         return $"Suit: {Suit}, Rank: {Rank}";
     }
 
+    public Card Copy()
+    {
+        return new Card(Suit, Rank);
+    }
+
     public int Points => CardPoints.For(Rank);
 
-    internal static class CardPoints
+    class CardPoints
     {
         public static int For(Rank rank) => Points[(int)rank];
 
@@ -34,7 +32,7 @@ internal class Card
 
         static CardPoints()
         {
-            Points = new int[8];
+            Points = new int[9];
             Points[(int)Rank.Seven] = 0;
             Points[(int)Rank.Eight] = 0;
             Points[(int)Rank.Nine] = 0;
