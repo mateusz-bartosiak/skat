@@ -4,9 +4,6 @@
 		{"type":"text","text":"Ruch przodka\n","id":"93268e8beb4199f9","x":-95,"y":-516,"width":220,"height":60},
 		{"type":"text","text":"Ruch środka\n","id":"35e67a62397a1349","x":-95,"y":64,"width":220,"height":60},
 		{"type":"text","text":"Ruch zadka\n ","id":"ae85ed61623ac978","x":-435,"y":-526,"width":250,"height":80},
-		{"type":"text","text":"Start licytacji","id":"3121b8c63a9727da","x":-1340,"y":64,"width":215,"height":60,"color":"5"},
-		{"type":"text","text":"Ruch środka\n","id":"15cce6d8e8c80b76","x":-939,"y":-296,"width":220,"height":80},
-		{"type":"text","text":"Ruch przodka\n","id":"87f07428a89823ac","x":-927,"y":-110,"width":195,"height":80},
 		{"type":"text","text":"Ruch wygranego licytacji","id":"3aa5678244a61c33","x":-889,"y":715,"width":215,"height":120},
 		{"type":"text","text":"Po licytacji","id":"c5f1848685594ced","x":-1477,"y":745,"width":215,"height":60,"color":"5"},
 		{"type":"text","text":"\"Ramsz\": koniec gry \nlub \"każdy gra solo\"","id":"fe2b8c7617d85415","x":-1506,"y":983,"width":273,"height":90,"color":"1"},
@@ -24,9 +21,12 @@
 		{"type":"text","text":"Ruch środka","id":"2f4b865d5186f4d9","x":-1147,"y":1360,"width":250,"height":60},
 		{"type":"text","text":"Start gry właściwej","id":"e43e1aca661c3928","x":-1967,"y":1360,"width":215,"height":60,"color":"5"},
 		{"type":"text","text":"Ruch przodka\n","id":"a0d0094f01490e50","x":-1616,"y":1360,"width":220,"height":60},
-		{"id":"c2e85243928ab35f","x":-449,"y":1200,"width":250,"height":100,"color":"5","type":"text","text":"warunek końcowy: w nullu nieprzebita lewa solisty, w pozostałych grach, koniec kart graczy"},
-		{"type":"text","text":"jeśli grand/kolor\n\n(1 + szczyty (lub braki) w ręce (od 1 do max. 11) + zadeklarowane cechy gry(1-hand, 2-sznajder, 3-szwarc, 4-ower)  + jeśli ugrane oczka (60) to ugrane deklaracje(1-sznajder, 2-szwarc, 3-ower))\n\npomnożyć przez\n\npoziom gry 9,10,11,12,24(karo,kier,pik,trefl,grand)\n\njeśli ugrane oczka to dodać wynik do sumy punków gracza\njeśli nieugrane oczka to odjąć dwukrotność wyniku od sumy punków gracza","id":"4a564876ed8dd4a5","x":-1380,"y":1705,"width":499,"height":320},
-		{"type":"text","text":"jesli null to po prostu wartość gry\n23 35 46 59\n\n\njeśli ugrany to dodać do sumy punktów gracza\njeśli nieugrany to odjąć od sumy punktów gracza\n","id":"30813e61b1622e4a","x":-1380,"y":2080,"width":460,"height":190}
+		{"type":"text","text":"warunek końcowy: w nullu nieprzebita lewa solisty, w pozostałych grach, koniec kart graczy","id":"c2e85243928ab35f","x":-449,"y":1160,"width":250,"height":140,"color":"5"},
+		{"type":"text","text":"jeśli grand/kolor\n\n(1 + szczyty (lub braki) w ręce (od 1 do max. 11) + zadeklarowane cechy gry(1-hand, 2-sznajder, 3-szwarc, 4-ower)  + jeśli ugrane oczka (60) to ugrane deklaracje(1-sznajder, 2-szwarc, 3-ower))\n\npomnożyć przez\n\npoziom gry 9,10,11,12,24(karo,kier,pik,trefl,grand)\n\njeśli ugrane oczka to dodać wynik do sumy punków gracza\njeśli nieugrane oczka to odjąć dwukrotność wyniku od sumy punków gracza","id":"4a564876ed8dd4a5","x":-1380,"y":1620,"width":499,"height":405},
+		{"type":"text","text":"jesli null to po prostu wartość gry\n23 35 46 59\n\n\njeśli ugrany to dodać do sumy punktów gracza\njeśli nieugrany to odjąć od sumy punktów gracza\n","id":"30813e61b1622e4a","x":-1380,"y":2080,"width":460,"height":190},
+		{"type":"text","text":"Start licytacji","id":"3121b8c63a9727da","x":-1919,"y":34,"width":215,"height":60,"color":"5"},
+		{"type":"text","text":"Ruch środka\n","id":"15cce6d8e8c80b76","x":-1518,"y":-326,"width":220,"height":80},
+		{"type":"text","text":"Ruch przodka\n","id":"87f07428a89823ac","x":-1506,"y":-140,"width":195,"height":80}
 	],
 	"edges":[
 		{"id":"a909f9210a3c8205","fromNode":"15cce6d8e8c80b76","fromSide":"top","toNode":"ae85ed61623ac978","toSide":"left","label":"\"pas\""},
