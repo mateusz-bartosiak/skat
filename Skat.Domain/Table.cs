@@ -27,7 +27,7 @@ internal class Table
 
     public Table(Player[] players)
     {
-        if (players.Length < 3)
+        if (players.Length != 3)
             throw new ArgumentOutOfRangeException();
         Players = players;
     }

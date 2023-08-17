@@ -2,7 +2,7 @@
 
 internal class Player
 {
-    public List<Card> HeldCards { get; } = new List<Card>();
+    public List<Card> Hand { get; } = new List<Card>();
 
     public string Name { get; set; }
 
@@ -11,7 +11,7 @@ internal class Player
     public override string ToString()
     {
         return $"Player with the name {Name} has the following cards:\n" + 
-            String.Join("\n", HeldCards.Select(c => c.ToString()));
+            String.Join("\n", Hand.Select(c => c.ToString()));
     }
 
 }

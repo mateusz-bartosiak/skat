@@ -13,19 +13,24 @@ namespace Skat.Domain
 
         public Deck()
         {
-            Cards = Enum
+            var cards = Enum
                 .GetValues<Suit>()
                 .SelectMany(s => Enum.GetValues<Rank>(),
                     (s, r) => new Card(s, r))
                 .ToList();
 
-            Shuffle();
+            Cards = Shuffle(cards);
         }
 
         public void Shuffle()
         {
+            Cards = Shuffle(Cards.Select(c => c.Copy()).ToList());
+        }
+
+        private List<Card> Shuffle(List<Card> cards)
+        {
             var shuffledCards = new List<Card>();
-            var copiedCards = new List<Card>(Cards.Select(c => c.Copy()));
+            var copiedCards = new List<Card>(cards.Select(c => c.Copy()));
 
             for (int i = 0; copiedCards.Count > 0; i++)
             {
@@ -35,7 +40,8 @@ namespace Skat.Domain
                 copiedCards.Remove(card);
             }
 
-            Cards = shuffledCards;
+            return shuffledCards;
         }
+
     }
 }
