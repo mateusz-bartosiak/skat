@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "skat", "skat\skat.csproj", "{E7600B19-8B0C-45BA-9EF0-19DD5A83155A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skat.Domain", "skat\Skat.Domain.csproj", "{E7600B19-8B0C-45BA-9EF0-19DD5A83155A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SkatTests", "SkatTests\SkatTests.csproj", "{41BA7324-EA74-4975-A6AD-49C9C7144ABA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Skat.Tests", "SkatTests\Skat.Tests.csproj", "{41BA7324-EA74-4975-A6AD-49C9C7144ABA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

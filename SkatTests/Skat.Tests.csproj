@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\skat\skat.csproj" />
+    <ProjectReference Include="..\skat\Skat.Domain.csproj" />
   </ItemGroup>
 
 </Project>
