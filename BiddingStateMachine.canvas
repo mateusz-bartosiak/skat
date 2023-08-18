@@ -1,0 +1,27 @@
+{
+	"nodes":[
+		{"type":"text","text":"Backhand move","id":"d939c4e950182405","x":-420,"y":54,"width":220,"height":80},
+		{"type":"text","text":"Backhand move","id":"ae85ed61623ac978","x":-435,"y":-526,"width":250,"height":80},
+		{"type":"text","text":"End","id":"1abe9e020d68d065","x":-450,"y":-216,"width":250,"height":60,"color":"1"},
+		{"type":"text","text":"Middlehand move","id":"15cce6d8e8c80b76","x":-939,"y":-342,"width":220,"height":80},
+		{"type":"text","text":"Fronthand move","id":"87f07428a89823ac","x":-927,"y":-156,"width":195,"height":80},
+		{"type":"text","text":"Middlehand move","id":"35e67a62397a1349","x":100,"y":64,"width":220,"height":60},
+		{"type":"text","text":"Fronthand move","id":"93268e8beb4199f9","x":100,"y":-516,"width":220,"height":60},
+		{"type":"text","text":"Start","id":"3121b8c63a9727da","x":-1280,"y":-327,"width":215,"height":50,"color":"5"}
+	],
+	"edges":[
+		{"id":"a909f9210a3c8205","fromNode":"15cce6d8e8c80b76","fromSide":"top","toNode":"ae85ed61623ac978","toSide":"left","label":"passes"},
+		{"id":"f51e6a57f2b38af4","fromNode":"87f07428a89823ac","fromSide":"bottom","toNode":"d939c4e950182405","toSide":"left","label":"passes"},
+		{"id":"643ad17549046da5","fromNode":"35e67a62397a1349","fromSide":"top","toNode":"1abe9e020d68d065","toSide":"right","label":"passes; SetDeclarerToBackhand()"},
+		{"id":"459cc168e6696418","fromNode":"87f07428a89823ac","fromSide":"right","toNode":"15cce6d8e8c80b76","toSide":"right","label":"plays"},
+		{"id":"7bc68ed38f8b2d38","fromNode":"35e67a62397a1349","fromSide":"bottom","toNode":"d939c4e950182405","toSide":"bottom","label":"plays"},
+		{"id":"b742d4a49ecdb1ff","fromNode":"ae85ed61623ac978","fromSide":"right","toNode":"93268e8beb4199f9","toSide":"left","label":"asks; increaseBid()"},
+		{"id":"407c9ca7fe357de4","fromNode":"ae85ed61623ac978","fromSide":"bottom","toNode":"1abe9e020d68d065","toSide":"top","label":"passes; SetDeclarerToFronthand()"},
+		{"id":"5ff1cb68f1f156b7","fromNode":"93268e8beb4199f9","fromSide":"top","toNode":"ae85ed61623ac978","toSide":"top","label":"plays"},
+		{"id":"7ce9a1460a3ec82d","fromNode":"d939c4e950182405","fromSide":"right","toNode":"35e67a62397a1349","toSide":"left","label":"asks; increaseBid()"},
+		{"id":"9e51b02abe3d6388","fromNode":"15cce6d8e8c80b76","fromSide":"bottom","toNode":"87f07428a89823ac","toSide":"top","label":"asks; increaseBid()"},
+		{"id":"a3e7ad863e0c31bf","fromNode":"d939c4e950182405","fromSide":"top","toNode":"1abe9e020d68d065","toSide":"bottom","label":"passes; SetDeclarerToMiddlehand()"},
+		{"id":"b8689dd717b65689","fromNode":"93268e8beb4199f9","fromSide":"bottom","toNode":"1abe9e020d68d065","toSide":"right","label":"passes; SetDeclarerToBackhand()"},
+		{"id":"ab1beef83aa8eff2","fromNode":"3121b8c63a9727da","fromSide":"right","toNode":"15cce6d8e8c80b76","toSide":"left"}
+	]
+}

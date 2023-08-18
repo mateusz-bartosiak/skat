@@ -16,7 +16,7 @@ public class TableTests
             forehand, middlehand, backhand
         });
 
-        table.AdvanceToNextRound();
+        table.AdvanceToTheNextRound();
 
         Assert.True(table.Forehand == middlehand);
         Assert.True(table.Middlehand == backhand);
@@ -35,9 +35,9 @@ public class TableTests
             forehand, middlehand, backhand
         });
 
-        table.AdvanceToNextRound();
-        table.AdvanceToNextRound();
-        table.AdvanceToNextRound();
+        table.AdvanceToTheNextRound();
+        table.AdvanceToTheNextRound();
+        table.AdvanceToTheNextRound();
 
         Assert.True(table.Forehand == forehand);
         Assert.True(table.Middlehand == middlehand);

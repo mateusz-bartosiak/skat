@@ -6,10 +6,8 @@
 		{"type":"text","text":"Ruch zadka\n ","id":"ae85ed61623ac978","x":-435,"y":-526,"width":250,"height":80},
 		{"type":"text","text":"Ruch wygranego licytacji","id":"3aa5678244a61c33","x":-889,"y":715,"width":215,"height":120},
 		{"type":"text","text":"Po licytacji","id":"c5f1848685594ced","x":-1477,"y":745,"width":215,"height":60,"color":"5"},
-		{"type":"text","text":"\"Ramsz\": koniec gry \nlub \"każdy gra solo\"","id":"fe2b8c7617d85415","x":-1506,"y":983,"width":273,"height":90,"color":"1"},
 		{"type":"text","text":"Koniec licytacji","id":"1abe9e020d68d065","x":-450,"y":-216,"width":250,"height":60,"color":"1"},
 		{"type":"text","text":"Koniec wyboru gry, zapowiedzi, start gry właściwej","id":"e18dd561e74ca76e","x":-199,"y":700,"width":273,"height":90,"color":"1"},
-		{"type":"text","text":"Ruch wygranego licytacji","id":"0a3580d0e99942cd","x":-187,"y":914,"width":250,"height":159},
 		{"type":"text","text":"Warunek końcowy gry osiągnięty?","id":"2aa8792fbc0d087d","x":-602,"y":1360,"width":250,"height":60},
 		{"type":"text","text":"Koniec gry właściwej, podliczenie wyników","id":"5e97b38a70a7c3f5","x":-602,"y":1780,"width":250,"height":85,"color":"1"},
 		{"type":"text","text":"Ruch zadka","id":"8de365a6a2a6bafa","x":-47,"y":1360,"width":250,"height":60},
@@ -22,11 +20,14 @@
 		{"type":"text","text":"Start gry właściwej","id":"e43e1aca661c3928","x":-1967,"y":1360,"width":215,"height":60,"color":"5"},
 		{"type":"text","text":"Ruch przodka\n","id":"a0d0094f01490e50","x":-1616,"y":1360,"width":220,"height":60},
 		{"type":"text","text":"warunek końcowy: w nullu nieprzebita lewa solisty, w pozostałych grach, koniec kart graczy","id":"c2e85243928ab35f","x":-449,"y":1160,"width":250,"height":140,"color":"5"},
-		{"type":"text","text":"jeśli grand/kolor\n\n(1 + szczyty (lub braki) w ręce (od 1 do max. 11) + zadeklarowane cechy gry(1-hand, 2-sznajder, 3-szwarc, 4-ower)  + jeśli ugrane oczka (60) to ugrane deklaracje(1-sznajder, 2-szwarc, 3-ower))\n\npomnożyć przez\n\npoziom gry 9,10,11,12,24(karo,kier,pik,trefl,grand)\n\njeśli ugrane oczka to dodać wynik do sumy punków gracza\njeśli nieugrane oczka to odjąć dwukrotność wyniku od sumy punków gracza","id":"4a564876ed8dd4a5","x":-1380,"y":1620,"width":499,"height":405},
-		{"type":"text","text":"jesli null to po prostu wartość gry\n23 35 46 59\n\n\njeśli ugrany to dodać do sumy punktów gracza\njeśli nieugrany to odjąć od sumy punktów gracza\n","id":"30813e61b1622e4a","x":-1380,"y":2080,"width":460,"height":190},
 		{"type":"text","text":"Start licytacji","id":"3121b8c63a9727da","x":-1919,"y":34,"width":215,"height":60,"color":"5"},
 		{"type":"text","text":"Ruch środka\n","id":"15cce6d8e8c80b76","x":-1518,"y":-326,"width":220,"height":80},
-		{"type":"text","text":"Ruch przodka\n","id":"87f07428a89823ac","x":-1506,"y":-140,"width":195,"height":80}
+		{"type":"text","text":"Ruch przodka\n","id":"87f07428a89823ac","x":-1506,"y":-140,"width":195,"height":80},
+		{"type":"text","text":"Ruch wygranego licytacji","id":"0a3580d0e99942cd","x":-187,"y":914,"width":250,"height":69},
+		{"type":"text","text":"\"Ramsz\": koniec gry \nlub \"każdy gra solo\"","id":"fe2b8c7617d85415","x":-1506,"y":949,"width":273,"height":90,"color":"1"},
+		{"type":"text","text":"jeśli grand/kolor\n\n(1 + szczyty (lub braki) w ręce (od 1 do max. 11) + zadeklarowane cechy gry(1-hand, 2-sznajder, 3-szwarc, 4-ower)  + jeśli ugrane oczka (60) to ugrane deklaracje(1-sznajder, 2-szwarc, 3-ower))\n\npomnożyć przez\n\npoziom gry 9,10,11,12,24(karo,kier,pik,trefl,grand)\n\njeśli ugrane oczka to dodać wynik do sumy punków gracza\njeśli nieugrane oczka to odjąć dwukrotność wyniku od sumy punków gracza","id":"4a564876ed8dd4a5","x":-1396,"y":1515,"width":499,"height":405},
+		{"type":"text","text":"jesli null to po prostu wartość gry\n23 35 46 59\n\n\njeśli ugrany to dodać do sumy punktów gracza\njeśli nieugrany to odjąć dwukrotność od sumy punktów gracza\n","id":"30813e61b1622e4a","x":-1357,"y":1945,"width":460,"height":190},
+		{"id":"689bbc9e145fd2cb","x":-1059,"y":394,"width":250,"height":60,"type":"text","text":""}
 	],
 	"edges":[
 		{"id":"a909f9210a3c8205","fromNode":"15cce6d8e8c80b76","fromSide":"top","toNode":"ae85ed61623ac978","toSide":"left","label":"\"pas\""},
@@ -59,7 +60,7 @@
 		{"id":"84a72f666af57139","fromNode":"0a3580d0e99942cd","fromSide":"top","toNode":"e18dd561e74ca76e","toSide":"bottom","label":"Null, Null Ower, Kolor, Grand"},
 		{"id":"2fae01e5d542d153","fromNode":"2aa8792fbc0d087d","fromSide":"right","toNode":"8de365a6a2a6bafa","toSide":"left","label":"nie"},
 		{"id":"8838b460e08e923e","fromNode":"2aa8792fbc0d087d","fromSide":"bottom","toNode":"5e97b38a70a7c3f5","toSide":"top","label":"tak"},
-		{"id":"23e5e200539d4d97","fromNode":"3aa5678244a61c33","fromSide":"top","toNode":"e18dd561e74ca76e","toSide":"top","label":"Null*(Hand, Ower) lub\n (Kolor, Grand)*(Hand, Sznajder, Szwarc, Ower)"},
+		{"id":"23e5e200539d4d97","fromNode":"3aa5678244a61c33","fromSide":"top","toNode":"e18dd561e74ca76e","toSide":"top","label":"Null*(Hand, Hand Ower) lub\n (Kolor, Grand)*(Hand, Sznajder, Szwarc, Ower)"},
 		{"id":"a3384cb11b71899a","fromNode":"5e97b38a70a7c3f5","fromSide":"left","toNode":"4a564876ed8dd4a5","toSide":"right"},
 		{"id":"110e5c9ccf078563","fromNode":"5e97b38a70a7c3f5","fromSide":"left","toNode":"30813e61b1622e4a","toSide":"right"}
 	]

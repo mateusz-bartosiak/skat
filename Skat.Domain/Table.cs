@@ -32,7 +32,7 @@ internal class Table
         Players = players;
     }
 
-    public void AdvanceToNextRound()
+    public void AdvanceToTheNextRound()
     {
         tableRolesOffset = KeepInBounds(tableRolesOffset + 1);
     }
