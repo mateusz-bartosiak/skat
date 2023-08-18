@@ -14,9 +14,13 @@ namespace Skat.StateMachineTranslator
             return JsonSerializer.Deserialize<Root>(contents);
         }
     }
+
+#pragma warning disable IDE1006 // Naming Styles
     public class Edge
     {
+
         public string fromNode { get; set; }
+
         public string toNode { get; set; }
         public string label { get; set; }
     }
@@ -32,6 +36,6 @@ namespace Skat.StateMachineTranslator
         public List<Node> nodes { get; set; }
         public List<Edge> edges { get; set; }
     }
-
+#pragma warning restore IDE1006 // Naming Styles
 
 }

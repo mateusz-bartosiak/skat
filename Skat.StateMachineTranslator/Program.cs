@@ -26,7 +26,7 @@ static string getEvent(Edge edge)
     if (index == -1)
         return edge.label;
     
-    return edge.label.Substring(0, index);
+    return edge.label[..index];
 }
 
 static string getAction(Edge edge)
@@ -36,7 +36,7 @@ static string getAction(Edge edge)
     if (index == -1)
         return "";
 
-    return edge.label.Substring(index + 2);
+    return edge.label[(index + 2)..];
 }
 
 Console.WriteLine(JsonSerializer.Serialize(transitions, new JsonSerializerOptions { WriteIndented = true }));

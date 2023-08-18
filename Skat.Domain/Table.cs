@@ -23,12 +23,12 @@ internal class Table
 
     private int tableRolesOffset = 0;
 
-    private int KeepInBounds(int n) => n < 0 ? 2 : n % 3;
+    private static int KeepInBounds(int n) => n < 0 ? 2 : n % 3;
 
     public Table(Player[] players)
     {
         if (players.Length != 3)
-            throw new ArgumentOutOfRangeException();
+            throw new ArgumentOutOfRangeException(nameof(players));
         Players = players;
     }
 

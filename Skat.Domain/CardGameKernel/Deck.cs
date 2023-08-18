@@ -27,7 +27,7 @@ namespace Skat.Domain
             Cards = Shuffle(Cards.Select(c => c.Copy()).ToList());
         }
 
-        private List<Card> Shuffle(List<Card> cards)
+        private static List<Card> Shuffle(List<Card> cards)
         {
             var shuffledCards = new List<Card>();
             var copiedCards = new List<Card>(cards.Select(c => c.Copy()));
