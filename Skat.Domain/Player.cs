@@ -14,4 +14,9 @@ internal class Player
             String.Join("\n", Hand.Select(c => c.ToString()));
     }
 
+    public bool HaveBeenDealtAllCards()
+    {
+        return Hand.Count == 10;
+    }
+
 }

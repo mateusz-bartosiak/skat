@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.CompilerServices;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Skat.Domain
 {
-    internal class Deck
+    internal class Deck: IEnumerable<Card>
     {
         public IReadOnlyList<Card> Cards { get; private set; }
 
@@ -15,7 +16,7 @@ namespace Skat.Domain
         {
             var cards = Enum
                 .GetValues<Suit>()
-                .SelectMany(s => Enum.GetValues<Rank>(),
+                .SelectMany(_ => Enum.GetValues<Rank>(),
                     (s, r) => new Card(s, r))
                 .ToList();
 
@@ -30,7 +31,7 @@ namespace Skat.Domain
         private static List<Card> Shuffle(List<Card> cards)
         {
             var shuffledCards = new List<Card>();
-            var copiedCards = new List<Card>(cards.Select(c => c.Copy()));
+            var copiedCards = cards.Select(c => c.Copy()).ToList();
 
             for (int i = 0; copiedCards.Count > 0; i++)
             {
@@ -43,5 +44,14 @@ namespace Skat.Domain
             return shuffledCards;
         }
 
+        public IEnumerator<Card> GetEnumerator()
+        {
+            return Cards.GetEnumerator();
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return Cards.GetEnumerator();
+        }
     }
 }

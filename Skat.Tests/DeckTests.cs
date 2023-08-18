@@ -14,7 +14,7 @@ public class DeckTests
     {
         var deck = new Deck();
 
-        Assert.Equal(32, deck.Cards.Count());
+        Assert.Equal(32, deck.Cards.Count);
         Assert.Equal(32, deck.Cards.Distinct().Count());
         Assert.Equal(4, deck.Cards.GroupBy(c => c.Suit).Count());
         Assert.Equal(8, deck.Cards.GroupBy(c => c.Rank).Count());

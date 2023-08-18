@@ -1,3 +1,4 @@
+using FluentAssertions;
 using Skat;
 
 namespace SkatTests;
@@ -18,9 +19,9 @@ public class TableTests
 
         table.AdvanceToTheNextRound();
 
-        Assert.True(table.Forehand == middlehand);
-        Assert.True(table.Middlehand == backhand);
-        Assert.True(table.Backhand == forehand);
+        table.Forehand.Should().Be(middlehand);
+        table.Middlehand.Should().Be(backhand);
+        table.Backhand.Should().Be(forehand);
     }
 
     [Fact]
@@ -39,8 +40,17 @@ public class TableTests
         table.AdvanceToTheNextRound();
         table.AdvanceToTheNextRound();
 
-        Assert.True(table.Forehand == forehand);
-        Assert.True(table.Middlehand == middlehand);
-        Assert.True(table.Backhand == backhand);
+        table.Forehand.Should().Be(forehand);
+        table.Middlehand.Should().Be(middlehand);
+        table.Backhand.Should().Be(backhand);
+    }
+    
+    [Fact]
+    public void PlayersAreDealtTenCardsEachAndSkatHasTwo()
+    {
+        var table = new Table(new Player("Player 1"), new Player("Player 2"), new Player("Player 3"));
+
+        table.Players.Should().OnlyContain(p => p.Hand.Count == 10);
+        table.Skat.Should().HaveCount(2);
     }
 }
